@@ -15,7 +15,10 @@ public class LexocographicGenerator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String charset = "ABC";
+        for(int i=0; i<charset.length();i++){
+            System.out.print(charset.charAt(i));
+        }
     }
     
 }
