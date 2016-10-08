@@ -1,0 +1,48 @@
+/*
+ * author = john albert t. presentacion
+ * title = strassens
+ * date = oct. 8. 2016
+ * student number = 201411792
+ * contact number = 09089354829(smart)
+ */
+package strassens;
+
+import java.util.Scanner;
+
+public class Strassens {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int m1[] = new int[4];
+        int m2[] = new int[4];
+        int m3[] = new int[10];
+
+        System.out.println("Matrix 1");
+        m1[0] = input.nextInt();
+        m1[1] = input.nextInt();
+        m1[2] = input.nextInt();
+        m1[3] = input.nextInt();
+
+        System.out.println("Matrix 2");
+        m2[0] = input.nextInt();
+        m2[1] = input.nextInt();
+        m2[2] = input.nextInt();
+        m2[3] = input.nextInt();
+
+        m3[0] = (m1[0] + m1[3]) * (m2[0] + m2[3]);
+        m3[1] = (m1[2] + m1[3]) * m2[0];
+        m3[2] = m1[0] * (m2[1] - m2[3]);
+        m3[3] = m1[3] * (m2[2] - m2[0]);
+        m3[4] = (m1[0] + m1[1]) * m2[3];
+        m3[5] = (m1[2] - m1[0]) * (m2[0] + m2[1]);
+        m3[6] = (m1[1] - m1[3]) * (m2[2] + m2[3]);
+
+        System.out.println("Matrix Results");
+        System.out.println((m3[0] + m3[3] - m3[4] + m3[6]));
+        System.out.println(m3[2] + m3[4]);
+        System.out.println(m3[1] + m3[3]);
+        System.out.println(m3[0] + m3[2] - m3[1] + m3[5]);
+
+    }
+
+}
