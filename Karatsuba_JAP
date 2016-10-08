@@ -1,0 +1,50 @@
+/*
+ * author = john albert t. presentacion
+ * title = karatsuba
+ * date = oct. 8. 2016
+ * student number = 201411792
+ * contact number = 09089354829(smart)
+ */
+package karatsuba;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Karatsuba {
+
+    public static void main(String[] args) {
+        int ac = 0;
+        int ad = 0;
+        int bc = 0;
+        int bd = 0;
+        int firstNum;
+        int secondNum;
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        int xy;
+     
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter First Number : ");
+        firstNum = input.nextInt();
+        System.out.print("Enter Second Number : ");
+        secondNum = input.nextInt();
+
+        a = firstNum / 100;
+        b = firstNum % 100;
+        c = secondNum / 100;
+        d = secondNum % 100;
+
+        ac = a * c;
+        ad = a * d;
+        bc = b * c;
+        bd = b * d;
+
+        xy = (ac * 10000) + ((ad + bc) * 100) + bd;
+        System.out.println("xy === " + xy);
+
+    }
+
+}
